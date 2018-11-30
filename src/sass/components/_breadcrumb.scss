@@ -1,0 +1,25 @@
+.breadcrumb {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+	margin: 1.6rem 0;
+	font-size: 1.2rem;
+
+	&__item {
+		display: block;
+	}
+
+	&__separator {
+		display: block;
+		&::after,
+		&::before {
+			content: '  ';
+			white-space: pre;
+		}
+		&:last-child {
+			display: none;
+		}
+	}
+}

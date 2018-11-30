@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Proxima Nova', -apple-system, 'Helvetica Neue', Helvetica,
+	Roboto, Arial, sans-serif, sans-serif !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #333 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #ffe600 !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #eee !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: #999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #666 !default;
+
+/// Primary
+/// @type Color
+$primary-blue: #3483fa !default;

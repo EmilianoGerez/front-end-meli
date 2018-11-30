@@ -1,0 +1,65 @@
+.item-list {
+	background-color: #fff;
+	padding: 1.6rem 0;
+	display: flex;
+	align-items: stretch;
+
+	&__img-box {
+		display: inline-block;
+		height: 18rem;
+		width: 18rem;
+		margin: 0 1.6rem;
+		border-radius: 4px;
+		background-color: $light-grey;
+		img {
+			height: 18rem;
+			border-radius: 4px;
+		}
+	}
+
+	&__body {
+		display: block;
+		height: 18rem;
+		width: 70%;
+		.price-container {
+			@include price-container(2.4);
+		}
+		.shipping {
+			display: inline-block;
+			height: 1.8rem;
+			width: 1.8rem;
+			img {
+				height: 1.8rem;
+			}
+		}
+		.location {
+			float: right;
+			font-size: 1.2rem;
+			line-height: 2.4rem;
+		}
+		.title {
+			display: block;
+			padding-top: 3.2rem;
+			font-size: 1.8rem;
+			font-weight: 400;
+			&:hover,
+			&:active,
+			&:visited,
+			&:focus {
+				text-decoration: none;
+				color: initial;
+				outline: none;
+			}
+		}
+	}
+
+	@include respond(tab-port) {
+		&__body {
+			.location {
+				display: block;
+				float: none;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

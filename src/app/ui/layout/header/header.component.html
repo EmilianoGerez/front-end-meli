@@ -1,0 +1,18 @@
+<header class="header">
+  <a href="#" class="header__logo">
+    <img
+      srcset="assets/img/Logo_ML.png 1x, assets/img/Logo_ML@2x.png.png 2x"
+      alt="Mercado Libre - Argentina"
+      />
+  </a>
+  <form (ngSubmit)="onSubmit(searchForm)" [formGroup]="searchForm"
+    class="header__search-form">
+    <input type="text" class="search-box" placeholder="Buscar productos"
+      formControlName="searchTerm" />
+    <button type="submit" class="btn search-btn"
+      [disabled]="searchForm.invalid">
+      <img srcset="assets/img/ic_Search.png 1x, assets/img/ic_Search@2x.png.png
+        2x" alt="Buscar" />
+    </button>
+  </form>
+</header>
