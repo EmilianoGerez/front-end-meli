@@ -1,14 +1,15 @@
 .result-list {
-	list-style: none;
-	&__item {
-		position: relative;
-		&:not(:last-child)::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 2.5%;
-			width: 95%;
-			border-bottom: 1px solid $light-grey;
-		}
-	}
+  list-style: none;
+  margin-bottom: 3.2rem;
+  &__item {
+    position: relative;
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 2.5%;
+      width: 95%;
+      border-bottom: 1px solid $light-grey;
+    }
+  }
 }

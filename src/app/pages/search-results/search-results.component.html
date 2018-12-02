@@ -1,5 +1,24 @@
-<p>
-  search-results works!
-</p>
-<h1>jlksjflds</h1>
-<h1>jlksjflds</h1>
+<app-breadcrumb [categories]="categories"></app-breadcrumb>
+<section>
+  <div class="row" *ngIf="itemList?.length; else noResult">
+    <div class="col-xs-offset-1 col-xs-10 position-relative">
+      <ol class="result-list">
+        <li class="result-list__item" *ngFor="let item of itemList">
+          <app-item [item]="item"></app-item>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <ng-template #noResult>
+    <div class="flex-center-vh" *ngIf="loadData">
+      <div class="no-results">
+        <h2 class="no-results__title">No hay publicaciones que coincidan con tu
+          búsqueda.</h2>
+        <ul class="no-results__advice-list">
+          <li><p>Revisá la ortografía de la palabra.</p></li>
+          <li><p>Utilizá palabras más genéricas o menos palabras.</p></li>
+        </ul>
+      </div>
+    </div>
+  </ng-template>
+</section>

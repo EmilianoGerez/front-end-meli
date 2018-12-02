@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +8,17 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   searchForm: FormGroup;
-  constructor(private router: Router, private fb: FormBuilder) {
+  constructor(private router: Router, private route: ActivatedRoute, private fb: FormBuilder) {
     this.searchForm = this.createForm();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.queryParams.subscribe(({ search }) => {
+      this.searchForm.patchValue({
+        searchTerm: search
+      });
+    });
+  }
 
   createForm() {
     return this.fb.group({

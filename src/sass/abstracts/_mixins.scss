@@ -7,29 +7,29 @@
 /// @param {Bool} $self [false] - Whether or not to include current selector
 /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 @mixin on-event($self: false) {
-	@if $self {
-		&,
-		&:hover,
-		&:active,
-		&:focus {
-			@content;
-		}
-	} @else {
-		&:hover,
-		&:active,
-		&:focus {
-			@content;
-		}
-	}
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
 }
 
 /// Make a context based selector a little more friendly
 /// @author Hugo Giraudel
 /// @param {String} $context
 @mixin when-inside($context) {
-	#{$context} & {
-		@content;
-	}
+  #{$context} & {
+    @content;
+  }
 }
 
 // Media queries
@@ -40,42 +40,46 @@
 // - 1800-*       large device
 
 @mixin respond($device) {
-	@if $device == phone {
-		@media (max-width: 600px) {
-			@content;
-		}
-	}
-	@if $device == tab-port {
-		@media (max-width: 900px) {
-			@content;
-		}
-	}
-	@if $device == tab-land {
-		@media (max-width: 1200px) {
-			@content;
-		}
-	}
-	@if $device == desktop {
-		@media (max-width: 1800px) {
-			@content;
-		}
-	}
-	@if $device == big-desktop {
-		@media (min-width: 1800px) {
-			@content;
-		}
-	}
+  @if $device == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $device == tab-port {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $device == tab-land {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $device == desktop {
+    @media (max-width: 1800px) {
+      @content;
+    }
+  }
+  @if $device == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
 }
 
 @mixin price-container($fontSize) {
-	display: inline-block;
-	font-size: $fontSize * 1rem;
-	.price-decimals {
-		font-size: ($fontSize / 2) * 1rem;
-		height: 20px;
-		left: -5px;
-		line-height: 1;
-		position: relative;
-		top: -8px;
-	}
+  display: inline-block;
+  font-size: $fontSize * 1rem;
+  & *::after {
+    content: ' ';
+    white-space: pre-wrap;
+  }
+  .price-decimals {
+    font-size: ($fontSize / 2) * 1rem;
+    height: 20px;
+    left: -5px;
+    line-height: 1;
+    position: relative;
+    top: -8px;
+  }
 }

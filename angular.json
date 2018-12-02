@@ -41,7 +41,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/sass/main.scss"],
+            "styles": ["src/sass/main.scss", "src/assets/css/flexboxgrid.min.css"],
             "scripts": []
           },
           "configurations": {

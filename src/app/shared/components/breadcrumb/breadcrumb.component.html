@@ -1,0 +1,14 @@
+<nav>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 position-relative">
+      <ul class="breadcrumb">
+        <ng-template ngFor let-cat [ngForOf]="categories">
+          <li class="breadcrumb__item">
+            <a href="#">{{cat}}</a>
+          </li>
+          <div class="breadcrumb__separator">></div>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</nav>

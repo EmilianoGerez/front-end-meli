@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: 'items',
     loadChildren: './pages/search-results/search-results.module#SearchResultsModule'
+  },
+  {
+    path: 'items/:id',
+    loadChildren: './pages/product-details/product-details.module#ProductDetailsModule'
   }
 ];
 

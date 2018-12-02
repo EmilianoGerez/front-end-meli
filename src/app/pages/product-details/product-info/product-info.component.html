@@ -1,0 +1,17 @@
+<div class="detail-container">
+  <div class="condition">
+    <p>{{productInfo?.condition == 'new' ? 'Nuevo' : 'Usado'}} -
+      {{productInfo?.sold_quantity}} {{productInfo?.sold_quantity > 1 ?
+      'vendidos' : 'vendido'}}</p>
+  </div>
+  <h2 class="title">{{productInfo?.title}}</h2>
+  <form action="#">
+    <div class="price-container">
+      <span class="price-simbol">$</span>
+      <span class="price-amount">{{productInfo?.price?.amount}}</span>
+      <span class="price-decimals" *ngIf="productInfo?.price?.decimals">{{productInfo.price.decimals}}</span>
+    </div>
+
+    <button type="submit" class="btn btn-purchase">Comprar</button>
+  </form>
+</div>

@@ -1,3 +1,23 @@
-<p>
-  item works!
-</p>
+<div class="item-list">
+  <div class="item-list__img-box">
+    <a routerLink="/items/{{item.id}}">
+      <img
+        src={{item.picture}} alt="{{item.title}}">
+    </a>
+  </div>
+  <div class="item-list__body">
+    <div class="price-container">
+      <span class="price-simbol">$</span>
+      <span class="price-amount">{{item?.price?.amount}}</span>
+      <span class="price-decimals" *ngIf="item.price.decimals">{{item.price.decimals}}</span>
+    </div>
+    <div class="shipping" *ngIf="item.free_shipping">
+      <img srcset="assets/img/ic_shipping.png 1x,
+        assets/img/ic_shipping@2x.png.png 2x"
+        alt="Envio Gratis">
+    </div>
+    <div class="location">Capital Federal</div>
+    <h2 class="title"><a [routerLink]="[ '/items/', item.id ]">{{item.title}}
+      </a> </h2>
+  </div>
+</div>
