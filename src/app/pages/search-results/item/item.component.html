@@ -8,7 +8,7 @@
   <div class="item-list__body">
     <div class="price-container">
       <span class="price-simbol">$</span>
-      <span class="price-amount">{{item?.price?.amount}}</span>
+      <span class="price-amount">{{item?.price?.amount | thousands}}</span>
       <span class="price-decimals" *ngIf="item.price.decimals">{{item.price.decimals}}</span>
     </div>
     <div class="shipping" *ngIf="item.free_shipping">
