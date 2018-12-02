@@ -10,4 +10,4 @@ import { RouterModule } from '@angular/router';
   exports: [BreadcrumbComponent],
   providers: [ItemService]
 })
-export class SharedModule {}
+export class SharedCommonModule {}

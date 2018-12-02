@@ -1,8 +1,8 @@
 <div class="item-list">
   <div class="item-list__img-box">
-    <a routerLink="/items/{{item.id}}">
+    <a [routerLink]="[ '/items/', item.id ]">
       <img
-        src={{item.picture}} alt="{{item.title}}">
+        [src]=item.picture [alt]="item.title">
     </a>
   </div>
   <div class="item-list__body">
