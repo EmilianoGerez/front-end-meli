@@ -11,6 +11,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Build SSR App
 
 Run `npm run build:prod` to build the ssr project. The build artifacts will be stored in the `dist/` directory.
+
 Incluí el `dist/` para salvar algun fallo que pueda surgir al realizar el build (version de TypeScript, etc).
 
 ## Run SSR App (run after finish build ssr)
