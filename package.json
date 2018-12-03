@@ -1,6 +1,11 @@
 {
   "name": "front-end-meli",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Emiliano",
+    "lastname": "Gerez",
+    "email": "emiliano.gerez@gmail.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
