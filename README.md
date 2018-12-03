@@ -1,4 +1,4 @@
-# Angular Front-End Meli
+# Angular Front-End MELI
 
 ## Development server
 
