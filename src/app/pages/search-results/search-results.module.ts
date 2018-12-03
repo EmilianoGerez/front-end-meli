@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { SearchResultsRoutingModule } from './search-results-routing.module';
 import { ItemComponent } from './item/item.component';
 import { SearchResultsComponent } from './search-results.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedCommonModule } from '../../common/shared-common.module';
 
 @NgModule({
-  imports: [CommonModule, SearchResultsRoutingModule, SharedModule],
+  imports: [CommonModule, SearchResultsRoutingModule, SharedCommonModule],
   declarations: [ItemComponent, SearchResultsComponent]
 })
 export class SearchResultsModule {}
