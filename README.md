@@ -12,7 +12,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `npm run build:prod` to build the ssr project. The build artifacts will be stored in the `dist/` directory.
 
-Incluí el `dist/` para salvar algun fallo que pueda surgir al realizar el build (version de TypeScript, etc).
+I include the `dist/`folder for avoid some problem in the build process.(TypeScript version, etc).
 
 ## Run SSR App (run after finish build ssr)
 Run `npm run server` for a SSR server. Navigate to `http://localhost:8080/`.
@@ -21,4 +21,4 @@ Run `npm run server` for a SSR server. Navigate to `http://localhost:8080/`.
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Pequeño test de formulario de busqueda (header.component.spec)
+Small example for search form (header.component.spec)
